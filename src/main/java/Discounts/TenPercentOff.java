@@ -10,7 +10,7 @@ public class TenPercentOff extends Discount {
     public TenPercentOff(String name) {
         super(name);
 
-        discountAmount = 0.1;
+        discountAmount = 0.9;
     }
 
     @Override

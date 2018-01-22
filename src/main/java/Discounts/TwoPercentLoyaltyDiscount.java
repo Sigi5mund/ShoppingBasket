@@ -11,7 +11,7 @@ public class TwoPercentLoyaltyDiscount extends Discount {
         public TwoPercentLoyaltyDiscount(String name) {
             super(name);
 
-            discountAmount = 0.02;
+            discountAmount = 0.98;
         }
 
         @Override

@@ -29,7 +29,10 @@ public class ShoppingBasket {
     }
 
     public Double totalBasketAfterDiscounts(){
-        ArrayList<Item> itemsDiscount = new ArrayList(Arrays.asList(items));
+        ArrayList<Item> itemsDiscount = new ArrayList<>();
+        for (Item item: items) {
+            itemsDiscount.add(item);
+        }
          Double newTotal = 0.0;
          applyDiscountsToBasketTotal(itemsDiscount);
 
@@ -74,7 +77,7 @@ public class ShoppingBasket {
         Double runningTotal =totalBasketBeforeDiscounts();
         for (IDiscount iDiscount: discounts
              ) {
-             iDiscount.doDiscount(itemsDiscount);
+             iDiscount.doDiscount(items);
             }
         }
 

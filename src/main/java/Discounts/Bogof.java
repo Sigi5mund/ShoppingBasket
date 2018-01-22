@@ -24,16 +24,17 @@ public class Bogof extends Discount {
             if (hashMap.get(item) == null) {
                 hashMap.put(item, 1);
             } else {
-                hashMap.put(item, hashMap.get(item).intValue() + 1);
+                hashMap.put(item, hashMap.get(item) + 1);
             }
-            
-            for (Item item1 : items) {
-                if (hashMap.get(item1).intValue() % 2 == 0) {
-                    item1.applyDiscountPrice(0.5);
-                } else if (hashMap.get(item1).intValue() % 2 == 5) {
-                    item1.applyDiscountPrice(0.6);
-                }
+        }
+
+        for (Item item1 : items) {
+            if (hashMap.get(item1) % 2 == 0) {
+                item1.applyDiscountPrice(0.5);
+            } else if (hashMap.get(item1) % 2 == 5) {
+                item1.applyDiscountPrice(0.6);
             }
         }
     }
+
 }
